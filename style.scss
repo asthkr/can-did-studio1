@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://db.onlinewebfonts.com/c/e89eb1cff9eb261b0d77a4dea27f1ef1?family=Helvetica+W01+Light");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;500;600;700;800&display=swap");
+
+$font-hel: "Helvetica W01 Light";
+$font-sans: "Open Sans", sans-serif;
+$font-cinzel: "Cinzel", serif;
+$font-pop: "Poppins", sans-serif;
+$font-sen: "Sen", sans-serif;
+$black-text: #262828;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $font-pop;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  color: $black-text;
+}
+
+.header {
+  background: #f8f8f8;
+  padding: 40px 0;
+  .logo-wrapper {
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: $black-text;
+      font-family: $font-sans, $font-hel;
+      a {
+        position: relative;
+        -webkit-user-select: none;
+        user-select: none;
+        padding: 5px 0;
+        &::before {
+          display: block;
+          content: " ";
+          width: 100%;
+          height: 2px;
+          background: $black-text;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        &::after {
+          display: block;
+          content: " ";
+          width: 100%;
+          height: 2px;
+          background: $black-text;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav-bar {
+      .nav-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        margin-bottom: 0;
+        .sec-link {
+          font-size: 14px;
+          list-style: none;
+          transition: all 300ms ease-in-out;
+          &:hover {
+            transition: all 300ms ease-in-out;
+            color: rgba($black-text, 0.5);
+          }
+        }
+      }
+    }
+  }
+  .social-icons {
+    i {
+      transition: all 300ms ease-in-out;
+      font-size: 32px;
+      &:hover {
+        transition: all 300ms ease-in-out;
+        color: rgba($black-text, 0.5);
+      }
+    }
+  }
+}
+.banner {
+  .img-wrapper {
+    position: relative;
+    .image-main {
+      .banner-image {
+        display: block;
+        width: 100vw;
+        height: 110vh;
+        background: url("../images/banner.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+    .image-abs {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      .abstract-image {
+        display: block;
+        width: 100vw;
+        height: 100px;
+        background: url("../images/abstract.png");
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+.about {
+  padding: 80px 0;
+  background: #f8f8f8;
+  .sec-heading {
+    font-family: $font-sen;
+    font-size: 100px;
+    font-weight: 700;
+    a {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 50px;
+      transition: 300ms all ease-in-out;
+      line-height: 80px;
+      letter-spacing: 1px;
+      span {
+        margin-right: 10px;
+      }
+      i {
+        font-size: 90px;
+        transition: all 200ms ease-in-out;
+      }
+      &:hover {
+        transition: 300ms all ease-in-out;
+        color: #5c5c5c;
+        font-size: 92px;
+        letter-spacing: 12px;
+        line-height: 72px;
+        i {
+          scale: 1.2;
+          transition: all 200ms linear;
+          rotate: 180deg;
+        }
+      }
+    }
+  }
+  .textbox {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: $font-pop;
+  }
+  .about-blogs {
+    .contentBox {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin-top: 30px;
+      .img-box {
+        border-radius: 5px;
+        overflow: hidden;
+        height: 550px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .related-text {
+        width: 90%;  
+         padding: 50px 0;
+        h3 { 
+      padding-bottom: 20px;
+          letter-spacing: 4px;
+          font-size: 34px;
+          word-spacing: 5px;
+          text-transform: uppercase;
+          font-family: $font-cinzel;
+        }
+        p{
+font-family: $font-hel;
+        }
+      }
+    }
+  }
+}
