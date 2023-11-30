@@ -97,6 +97,19 @@ body a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.banner .img-wrapper .image-main .banner-tag-text {
+  position: absolute;
+  bottom: 30%;
+  left: 5%;
+}
+.banner .img-wrapper .image-main .banner-tag-text h4 {
+  font-family: "Sen", sans-serif;
+  margin: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  mix-blend-mode: difference;
 }
 .banner .img-wrapper .image-abs {
   position: absolute;
@@ -161,28 +174,28 @@ body a {
   font-weight: 400;
   font-family: "Poppins", sans-serif;
 }
-.about .about-blogs .contentBox {
+.about .about-blogs .contentBoxl {
   display: flex;
   flex-direction: column;
   width: 90%;
   margin-top: 30px;
 }
-.about .about-blogs .contentBox .img-box {
+.about .about-blogs .contentBoxl .img-box {
   border-radius: 5px;
   overflow: hidden;
   height: 550px;
 }
-.about .about-blogs .contentBox .img-box img {
+.about .about-blogs .contentBoxl .img-box img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.about .about-blogs .contentBox .related-text {
+.about .about-blogs .contentBoxl .related-text {
   width: 90%;
   padding: 50px 0;
 }
-.about .about-blogs .contentBox .related-text h3 {
+.about .about-blogs .contentBoxl .related-text h3 {
   padding-bottom: 20px;
   letter-spacing: 4px;
   font-size: 34px;
@@ -190,6 +203,225 @@ body a {
   text-transform: uppercase;
   font-family: "Cinzel", serif;
 }
-.about .about-blogs .contentBox .related-text p {
+.about .about-blogs .contentBoxl .related-text p {
   font-family: "Helvetica W01 Light";
+}
+.about .about-blogs .contentBoxr {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-right: 0;
+  margin-left: 10%;
+}
+.about .about-blogs .contentBoxr .img-box {
+  border-radius: 5px;
+  overflow: hidden;
+  height: 550px;
+}
+.about .about-blogs .contentBoxr .img-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about .about-blogs .contentBoxr .related-text {
+  width: 90%;
+  padding: 50px 0;
+  margin-left: 10%;
+}
+.about .about-blogs .contentBoxr .related-text h3 {
+  padding-bottom: 20px;
+  letter-spacing: 4px;
+  font-size: 34px;
+  word-spacing: 5px;
+  text-transform: uppercase;
+  font-family: "Cinzel", serif;
+}
+.about .about-blogs .contentBoxr .related-text p {
+  font-family: "Helvetica W01 Light";
+}
+
+.portfolio {
+  position: relative;
+  padding: 100px 0;
+}
+.portfolio .sec-heading {
+  font-family: "Sen", sans-serif;
+  font-size: 100px;
+  font-weight: 700;
+}
+.portfolio .sec-heading a {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
+  transition: 300ms all ease-in-out;
+  line-height: 80px;
+  letter-spacing: 1px;
+}
+.portfolio .sec-heading a span {
+  margin-right: 10px;
+}
+.portfolio .sec-heading a i {
+  font-size: 90px;
+  transition: all 200ms ease-in-out;
+}
+.portfolio .sec-heading a:hover {
+  transition: 300ms all ease-in-out;
+  color: #5c5c5c;
+  font-size: 92px;
+  letter-spacing: 12px;
+  line-height: 72px;
+}
+.portfolio .sec-heading a:hover i {
+  scale: 1.2;
+  transition: all 200ms linear;
+  rotate: 180deg;
+}
+.portfolio .gallery-wrapper {
+  position: relative;
+  z-index: 500;
+}
+.portfolio .gallery-wrapper .gallery-item {
+  margin-top: 100px;
+}
+.portfolio .gallery-wrapper .gallery-item .contentgallery {
+  height: 500px;
+  width: 100%;
+  visibility: hidden;
+}
+.portfolio .gallery-wrapper .gallery-item .contentgallery img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contact {
+  padding: 80px 0;
+}
+.contact .sec-heading {
+  font-family: "Sen", sans-serif;
+  font-size: 100px;
+  font-weight: 700;
+}
+.contact .sec-heading a {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
+  transition: 300ms all ease-in-out;
+  line-height: 80px;
+  letter-spacing: 1px;
+}
+.contact .sec-heading a span {
+  margin-right: 10px;
+}
+.contact .sec-heading a:hover {
+  transition: 300ms all ease-in-out;
+  color: #5c5c5c;
+  font-size: 92px;
+  letter-spacing: 12px;
+  line-height: 72px;
+}
+.contact .textbox {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+.contact .contact-wrapper {
+  width: 80%;
+  border: 1px solid #f5f5f5;
+  box-shadow: 0 0 15px -5px #c4c4c4;
+  border-radius: 15px;
+  padding: 70px 0;
+  background-color: #f8f8f8;
+  margin: 0 auto;
+}
+.contact .contact-wrapper label {
+  font-family: "Sen", sans-serif;
+}
+.contact .contact-wrapper .form-control {
+  border-color: #fff;
+}
+.contact .contact-wrapper .form-control:focus {
+  border-color: #ececec;
+  box-shadow: none;
+}
+.contact .contact-wrapper .form-btn {
+  padding: 10px 0;
+  border: none;
+  font-family: "Sen", sans-serif;
+  border-radius: 5px;
+  transition: 200ms all ease-in-out;
+}
+.contact .contact-wrapper .form-btn:hover {
+  transition: 200ms all ease-in-out;
+  color: #5c5c5c;
+  letter-spacing: 1.2px;
+}
+
+.footer {
+  padding: 150px 0;
+}
+.footer .f-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.footer .f-content .own-name {
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif, "Helvetica W01 Light";
+  font-weight: 500;
+  font-size: 24px;
+}
+.footer .f-content .logo-wrapper h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #262828;
+  font-family: "Open Sans", sans-serif, "Helvetica W01 Light";
+}
+.footer .f-content .logo-wrapper h1 a {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+  padding: 5px 0;
+}
+.footer .f-content .logo-wrapper h1 a::before {
+  display: block;
+  content: " ";
+  width: 100%;
+  height: 2px;
+  background: #262828;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.footer .f-content .logo-wrapper h1 a::after {
+  display: block;
+  content: " ";
+  width: 100%;
+  height: 2px;
+  background: #262828;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.footer .f-content .social-links {
+  display: flex;
+  align-items: baseline;
+  gap: 40px;
+  color: #262828;
+}
+.footer .f-content .social-links .iconbox i {
+  font-size: 28px;
 }/*# sourceMappingURL=style.css.map */
