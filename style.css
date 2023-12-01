@@ -434,6 +434,10 @@ body .fixed {
 }
 
 @media only screen and (max-width: 768px) {
+  .contact .contact-wrapper {
+    width: 100%;
+    border: none;
+  }
   .sec-heading a:hover {
     transition: 300ms all ease-in-out;
     color: inherit !important;

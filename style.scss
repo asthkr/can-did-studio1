@@ -32,7 +32,6 @@ body {
     transition: all 200ms ease-in-out;
   }
 }
-
 .header {
   transition: all 200ms ease-in-out;
   background: #f8f8f8;
@@ -475,6 +474,10 @@ right: 0;
 }
 
 @media only screen and (max-width: 768px) {
+  .contact .contact-wrapper{
+    width:100%;
+    border: none;
+  }
   .sec-heading a {
     &:hover {
       transition: 300ms all ease-in-out;
