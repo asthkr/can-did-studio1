@@ -10,17 +10,32 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
   color: #262828;
+  font-family: "Poppins", sans-serif;
 }
 body a {
   text-decoration: none;
   color: inherit;
 }
+body .fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 20px 0;
+  transition: all 200ms ease-in-out;
+}
 
 .header {
+  transition: all 200ms ease-in-out;
   background: #f8f8f8;
   padding: 40px 0;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .header .logo-wrapper h1 {
   font-size: 22px;
@@ -57,14 +72,17 @@ body a {
 }
 .header .nav-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: end;
+}
+.header .nav-wrapper .nav-icon {
+  transition: all 300ms linear;
+  font-size: 24px;
+}
+.header .nav-wrapper .nav-bar {
+  transition: all 300ms linear;
 }
 .header .nav-wrapper .nav-bar .nav-list {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   gap: 50px;
   margin-bottom: 0;
 }
@@ -101,7 +119,7 @@ body a {
 }
 .banner .img-wrapper .image-main .banner-tag-text {
   position: absolute;
-  bottom: 30%;
+  bottom: 150px;
   left: 5%;
 }
 .banner .img-wrapper .image-main .banner-tag-text h4 {
@@ -134,33 +152,29 @@ body a {
 }
 .about .sec-heading {
   font-family: "Sen", sans-serif;
-  font-size: 100px;
+  font-size: 6vmax;
   font-weight: 700;
 }
 .about .sec-heading a {
   display: inline-flex;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding: 0 50px;
   transition: 300ms all ease-in-out;
-  line-height: 80px;
-  letter-spacing: 1px;
+  line-height: 60px;
 }
 .about .sec-heading a span {
   margin-right: 10px;
 }
 .about .sec-heading a i {
-  font-size: 90px;
+  font-size: 6vmax;
   transition: all 200ms ease-in-out;
 }
 .about .sec-heading a:hover {
   transition: 300ms all ease-in-out;
   color: #5c5c5c;
-  font-size: 92px;
   letter-spacing: 12px;
-  line-height: 72px;
 }
 .about .sec-heading a:hover i {
   scale: 1.2;
@@ -180,12 +194,12 @@ body a {
   width: 90%;
   margin-top: 30px;
 }
-.about .about-blogs .contentBoxl .img-box {
+.about .about-blogs .contentBoxl .img-box1, .about .about-blogs .contentBoxl .img-box2, .about .about-blogs .contentBoxl .img-box3 {
   border-radius: 5px;
   overflow: hidden;
   height: 550px;
 }
-.about .about-blogs .contentBoxl .img-box img {
+.about .about-blogs .contentBoxl .img-box1 img, .about .about-blogs .contentBoxl .img-box2 img, .about .about-blogs .contentBoxl .img-box3 img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -213,12 +227,12 @@ body a {
   margin-right: 0;
   margin-left: 10%;
 }
-.about .about-blogs .contentBoxr .img-box {
+.about .about-blogs .contentBoxr .img-box1, .about .about-blogs .contentBoxr .img-box2, .about .about-blogs .contentBoxr .img-box3 {
   border-radius: 5px;
   overflow: hidden;
   height: 550px;
 }
-.about .about-blogs .contentBoxr .img-box img {
+.about .about-blogs .contentBoxr .img-box1 img, .about .about-blogs .contentBoxr .img-box2 img, .about .about-blogs .contentBoxr .img-box3 img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -247,7 +261,7 @@ body a {
 }
 .portfolio .sec-heading {
   font-family: "Sen", sans-serif;
-  font-size: 100px;
+  font-size: 6vmax;
   font-weight: 700;
 }
 .portfolio .sec-heading a {
@@ -256,24 +270,20 @@ body a {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding: 0 50px;
   transition: 300ms all ease-in-out;
-  line-height: 80px;
-  letter-spacing: 1px;
+  line-height: 70px;
 }
 .portfolio .sec-heading a span {
   margin-right: 10px;
 }
 .portfolio .sec-heading a i {
-  font-size: 90px;
+  font-size: 6vmax;
   transition: all 200ms ease-in-out;
 }
 .portfolio .sec-heading a:hover {
   transition: 300ms all ease-in-out;
   color: #5c5c5c;
-  font-size: 92px;
   letter-spacing: 12px;
-  line-height: 72px;
 }
 .portfolio .sec-heading a:hover i {
   scale: 1.2;
@@ -304,7 +314,7 @@ body a {
 }
 .contact .sec-heading {
   font-family: "Sen", sans-serif;
-  font-size: 100px;
+  font-size: 6vmax;
   font-weight: 700;
 }
 .contact .sec-heading a {
@@ -313,10 +323,8 @@ body a {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding: 0 50px;
   transition: 300ms all ease-in-out;
-  line-height: 80px;
-  letter-spacing: 1px;
+  line-height: 70px;
 }
 .contact .sec-heading a span {
   margin-right: 10px;
@@ -324,9 +332,8 @@ body a {
 .contact .sec-heading a:hover {
   transition: 300ms all ease-in-out;
   color: #5c5c5c;
-  font-size: 92px;
   letter-spacing: 12px;
-  line-height: 72px;
+  line-height: 70px;
 }
 .contact .textbox {
   margin: 30px 0;
@@ -424,4 +431,31 @@ body a {
 }
 .footer .f-content .social-links .iconbox i {
   font-size: 28px;
+}
+
+@media only screen and (max-width: 768px) {
+  .sec-heading a:hover {
+    transition: 300ms all ease-in-out;
+    color: inherit !important;
+    letter-spacing: inherit !important;
+  }
+  .sec-heading a:hover i {
+    scale: 1 !important;
+    transition: all 200ms linear;
+    rotate: 180deg;
+  }
+  .about .about-blogs .contentBoxl {
+    width: 100%;
+  }
+  .about .about-blogs .contentBoxl .related-text {
+    width: 100%;
+  }
+  .about .about-blogs .contentBoxr {
+    width: 100%;
+    margin-left: 0%;
+  }
+  .about .about-blogs .contentBoxr .related-text {
+    width: 100%;
+    margin-left: 0%;
+  }
 }/*# sourceMappingURL=style.css.map */
